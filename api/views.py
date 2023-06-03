@@ -21,8 +21,8 @@ class RecognizeAndAnswer(APIView):
         openai.api_key = "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"
 
         photo = request.FILES['photo'].file.read()
-        with open('rec.jpg', 'wb') as f:
-            f.write(photo)
+#        with open('rec.jpg', 'wb') as f:
+#            f.write(photo)
 
         res = markImage(photo)
         print(f"Vision return {res}")
