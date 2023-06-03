@@ -1,0 +1,11 @@
+---
+version: "2.1"
+services:
+  api:
+    build: .
+    image: api
+    container_name: api
+    ports:
+      - "7080:8000"
+    restart: always
+...
