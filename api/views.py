@@ -7,6 +7,5 @@ class Receive(APIView):
     def post(self, request):
         print(request.FILES.get('photo'))
         with open('rec.jpg', 'wb') as f:
-            f.write(request.FILES['photo'].file.read() )
-
-        return Response({'asf': 'asf'})
+            f.write(request.FILES['photo'].file.read())
+        return Response({'status': 'ok'})
